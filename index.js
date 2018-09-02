@@ -12,7 +12,7 @@ const states = [];
 const microAuthFacebook = ({ appId, appSecret, fields = 'name,email,cover', callbackUrl, path = '/auth/facebook', scope = 'public_profile,email', apiVersion = '2.11' }) => {
 
   const getRedirectUrl = state => {
-    return `https://www.facebook.com/dialog/oauth?client_id=${appId}&redirect_uri=${callbackUrl}&response_type=code&state=${state}&scope=${scope}`;
+    return `https://www.facebook.com/dialog/oauth?client_id=${appId}&redirect_uri=${callbackUrl}&response_type=code&state=${state}&auth_type=rerequest&scope=${scope}`;
   };
 
   const getAccessTokenUrl = code => {
